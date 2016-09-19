@@ -1,0 +1,16 @@
+[Unit]
+Description=Improv Service
+Wants=network.target
+
+[Service]
+ExecStart=%DIR%/%BIN%
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=improv
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=%DIR%
+
+[Install]
+WantedBy=multi-user.target
