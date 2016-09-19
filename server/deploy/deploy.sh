@@ -2,7 +2,7 @@
 
 set -e
 
-NAME="improv-server"
+NAME="improv"
 GO_PATH="$GOPATH"
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BIN="server"
