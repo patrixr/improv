@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Improv API Documentation v0.0.1}
+\author{Patrick R}
+\date{\today}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\begin{document}
+
+\maketitle
+
+
+\section{Intro}
+
+An improvised web API. The introduction will grow over time.
+
+\section{Urls}
+\color{mauve}
+\framebox[1.1\width]{ Dev environment }
+\framebox[1.1\width]{ http://198.211.121.98 }
+\color{black}
+
+\section{Versionning}
+The version of the api can be checked using the following endpoint
+\begin{lstlisting}
+GET /version
+\end{lstlisting} 
+
+\section{API}
+
+\subsection{Reading Data}
+
+\begin{lstlisting}
+GET /api/data?from={idx}&count={n}
+\end{lstlisting}
+ 
+
+
+
+\end{document}

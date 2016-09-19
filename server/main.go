@@ -6,6 +6,7 @@ import (
     "log"
     "math/rand"
 	"time"
+    "os"
 
     "github.com/gorilla/mux"
 )
@@ -33,7 +34,12 @@ func main() {
 
     rand.Seed(time.Now().UTC().UnixNano())
 
+    cwd, _ := os.Getwd()
+    static := path.Join(cwd, "documentation/pdf")
+
     r := mux.NewRouter()
+    
+    r.PathPrefix("/doc/pdf").Handler(http.StripPrefix("/doc/pdf", http.FileServer(http.Dir(static))))
 
     createRoutes("/", App.Routes, r)
 
