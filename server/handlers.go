@@ -32,5 +32,6 @@ func HandleData(w http.ResponseWriter, r *http.Request) {
         log.Panic("JSON Marshal error")
     }
     
+    w.Header().Set("Content-Type", "application/json")
     w.Write([]byte( str ))
 }
